@@ -1,4 +1,4 @@
-Amans Instagrams
+Aman's Instagram
 
 Requirements
 - Python 3.6
