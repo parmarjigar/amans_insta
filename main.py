@@ -157,5 +157,5 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+    app.secret_key = os.getenv('SECRET_KEY')
     app.run(host='0.0.0.0', port=5000, debug=True)
