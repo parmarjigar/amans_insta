@@ -6,10 +6,6 @@
         <a class="nav-link active" id="upload-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="upload"
            aria-selected="true">Upload</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search"
-           aria-selected="false">Search</a>
-    </li>
 </ul>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="upload" role="tabpanel" aria-labelledby="upload-tab">
@@ -24,22 +20,6 @@
                 </div>
             </div>
         </form>
-    </div>
-    <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
-        <div class="col-md-4">
-            <form action="/search" method="POST" class="search-form" id="search_form">
-                <div class="form-group has-feedback" style="display:flex">
-                    <label for="search_text" class="sr-only">Search</label>
-                    <input type="text" style="margin-top:5px" class="form-control" name="search_text" id="search_text"
-                           placeholder="Image name" value="{{ request.form.search_text}}">
-                    <input class="btn btn-primary" id='search_image' type="submit" value="Search">
-                </div>
-            </form>
-            <br>
-            <div id="view_image">
-
-            </div>
-        </div>
     </div>
 </div>
 {% endblock %}

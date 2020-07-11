@@ -1,17 +1,37 @@
 {% extends "header.html" %}
 {% block body %}
 <body>
-	<div class="container">
-		<br>
-		<h4>Please Login:</h4>
-		<br>
-		<form action="" class="form-inline" method="post">
-			<input type="text" class="form-control" placeholder = "Username" name="username" value="{{request.form.username}}">
-			<input type="password" class="form-control" placeholder = "Password" name="password" value="{{request.form.password}}">
-			<input class="btn btn-default" type="submit" value="Login">
-		</form>
-		<p> {{error}}</p>
+<div class="container">
+    <br>
+    <h4>Please Login to upload an Image</h4>
+    <br>
+    <form action="" class="form-inline" method="post">
+        <input type="text" class="form-control" placeholder="Username" name="username"
+               value="{{request.form.username}}">
+        <input type="password" class="form-control" placeholder="Password" name="password"
+               value="{{request.form.password}}">
+        <input class="btn btn-primary" type="submit" value="Login">
+    </form>
+    <p> {{error}}</p>
+    <h5 style="margin-top:5%"> OR </h5>
+    <div style="margin-top:5%">
+        <h3>Search Image</h3>
+        <div class="col-md-4">
+            <form action="/search" method="POST" class="search-form" id="search_form">
+                <div class="form-group has-feedback" style="display:flex">
+                    <label for="search_text" class="sr-only">Search</label>
+                    <input type="text" style="margin-top:5px" class="form-control" name="search_text" id="search_text"
+                           placeholder="Image name" value="{{ request.form.search_text}}">
+                    <input class="btn btn-primary" id='search_image' type="submit" value="Search">
+                </div>
+            </form>
+            <br>
+            <div id="view_image">
 
-	</div>
+            </div>
+        </div>
+    </div>
+
+</div>
 </body>
 {% endblock %}

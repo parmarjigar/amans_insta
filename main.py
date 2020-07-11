@@ -133,7 +133,6 @@ def upload_image():
 
 
 @app.route('/search/', methods=['POST'])
-@login_required
 def search():
     image_name = request.form['search_text'].lower()
     image_map = get_pickle_file()
